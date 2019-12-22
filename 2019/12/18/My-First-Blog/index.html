@@ -1,382 +1,285 @@
 <!DOCTYPE html>
-<html>
-  
+<html lang="en">
+
+<!-- Head tag -->
 <head>
-  <meta charset="utf-8">
-  <meta name="author" content="Junhan Liu" />
-  
-  
-  <title>My First Blog :) | Hexo</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-    <meta name="keywords" content="Hexo, Theme-AD" />
-  
+    <!--Description-->
+    
+        <meta name="description" content="First oneSecond One">
+    
 
-  
-  <meta name="description" content="Junhan Liu`s Blog">
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
 
-  
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="My First Blog :)"/>
+    
 
-  
-    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js" async></script>
-  
+    <!--Open Graph Description-->
+    
 
-  
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
-  
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo"/>
 
-  
-    <script src="//unpkg.com/valine/dist/Valine.min.js" async></script>
-  
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
 
-  
+    <!--Page Cover-->
+    
 
-  <script>
-  // theme-ad's config script
-  // it can be used in every script
-  
-  window.AD_CONFIG = {
-    leancloud: {"appid":null,"appkey":null,"comment":true,"count":true},
-    welcome: {"enable":false,"interval":30},
-    start_time: "2019-12-18",
-    passwords: ["efe07af7441da2b69c4a41e42e73be4db47f66010a56900788a458354a7373ec", ],
-    is_post: true,
-    lock: false,
-    author: "Junhan Liu",
-    share: {"twitter":true,"facebook":true,"weibo":true,"qq":true,"wechat":true},
-    mathjax: true,
-    page_type: "",
-    root: "/"
-  };
-</script>
+    <meta name="twitter:card" content="summary" />
+    
 
-  
-<script src="/vendor/sha256.min.js"></script>
-<script src="/js/auth.js"></script>
-<script src="/js/index.js"></script>
-<script src="/vendor/qrcode.min.js"></script>
+    <!-- Title -->
+    
+    <title>My First Blog :) - Hexo</title>
 
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
 
-  
-    <link rel="icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/touch-icon.png">
-  
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
-  
-<link rel="stylesheet" href="/css/index.css">
-<link rel="stylesheet" href="/styles/components/highlight/highlight.css">
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
 
-  
+    <!-- Google Analytics -->
+    
+
+
 <meta name="generator" content="Hexo 4.1.1"></head>
-  <body>
-    <header class="site-header">
-  <div class="site-header-brand">
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
     
-      <span class="site-header-brand-title">
-        <a href="/">SL</a>
-      </span>
-    
-    
-      <span class="site-header-brand-motto"> | Note Keeper</span>
-    
-  </div>
-  <div class="site-header-right">
-    <nav class="site-header-navigation">
-      
-        <a href="/" target="_self">Main</a>
-      
-        <a href="/archives/" target="_self">Archives</a>
-      
-        <a href="/tags/" target="_self">Tags</a>
-      
-        <a href="/categories/" target="_self">Categories</a>
-      
-        <a href="/friends/" target="_self">Friends</a>
-      
-        <a href="/about/" target="_self">About</a>
-      
-    </nav>
-    <div class="site-header-btn">
-      
-        <a href="https://github.com/Junhanliu-dev/" target="_blank" id="site-github">
-          <i class="fa fa-github-alt"></i>
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Hexo">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Hexo">
         </a>
-      
-      <a href="javascript:void(0);" id="site-search">
-        <i class="fa fa-search"></i>
-      </a>
-      <a href="javascript:void(0);" id="site-nav-btn">
-        <i class="fa fa-ellipsis-v"></i>
-      </a>
-    </div>
-  </div>
-</header>
-<nav class="table-content" id="site-nav">
-  <div class="table-content-title">
-    <span>导航</span>
-  </div>
-  <div class="table-content-main">
-    <ol class="toc">
-      
-        <li class="toc-item">
-          <a href="/" target="_self">
-            Main
-          </a>
-        </li>
-      
-        <li class="toc-item">
-          <a href="/archives/" target="_self">
-            Archives
-          </a>
-        </li>
-      
-        <li class="toc-item">
-          <a href="/tags/" target="_self">
-            Tags
-          </a>
-        </li>
-      
-        <li class="toc-item">
-          <a href="/categories/" target="_self">
-            Categories
-          </a>
-        </li>
-      
-        <li class="toc-item">
-          <a href="/friends/" target="_self">
-            Friends
-          </a>
-        </li>
-      
-        <li class="toc-item">
-          <a href="/about/" target="_self">
-            About
-          </a>
-        </li>
-      
-    </ol>
-  </div>
-</nav>
-<div id="site-process"></div>
-    <main>
-      
-  <div class="passage">
-  <div class="passage-meta">
-    <span>
-      <i class="fa fa-calendar"></i>2019-12-18
-    </span>
-    
-    
-      <span>
-        | <i class="fa fa-unlock-alt"></i>UNLOCK
-      </span>
-    
-  </div>
-  <h1 class="passage-title">
-    My First Blog :)
-  </h1>
-  
-  <article class="passage-article">
-    <h2 id="First-one"><a href="#First-one" class="headerlink" title="First one"></a>First one</h2><h2 id="Second-One"><a href="#Second-One" class="headerlink" title="Second One"></a>Second One</h2>
-  </article>
-  <aside class="table-content" id="site-toc">
-  <div class="table-content-title">
-    <i class="fa fa-arrow-right fa-lg" id="site-toc-hide-btn"></i>
-    <span>目录</span>
-  </div>
-  <div class="table-content-main">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#First-one"><span class="toc-text">First one</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Second-One"><span class="toc-text">Second One</span></a></li></ol>
-  </div>
-</aside>
-  
-    <aside class="passage-copyright">
-      <div>本文作者: Junhan Liu</div>
-      
-        <div>
-          原文链接: 
-          <a href="" target="_blank">http://yoursite.com/2019/12/18/My-First-Blog/</a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
         </div>
-      
-      <div>
-        copyright: All Articles, except mentioned, comply with <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> protocol. Cite with original!
-      </div>
-    </aside>
-  
-  
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">My First Blog :)</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-12-18</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
 </div>
 
-    </main>
-    
-      
-<div class="site-comment-contanier" data-plateform="leancloud">
-  
-    <p id="site-comment-info">
-      <i class="fa fa-spinner fa-spin"></i> 评论加载中
-    </p>
-    <div id="site-comment"></div>
-  
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+
+                    <!-- Main Post Content -->
+                    <h2 id="First-one"><a href="#First-one" class="headerlink" title="First one"></a>First one</h2><h2 id="Second-One"><a href="#Second-One" class="headerlink" title="Second One"></a>Second One</h2>
+                    
+                    <!-- Tags Bottom -->
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/V.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="John Doe">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Junhan Liu and this is my blog
+        </div>
+    </article>
 </div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
     
-    <div class="site-footer-wrapper">
-  <footer class="site-footer">
+        <p>
+            <a href="/categories/C/">C#</a>
+        </p>
     
-      
-        <div class="site-footer-col">
-          <h5 class="site-footer-title">Recommendations</h5>
-          
-            <span class="site-footer-item">
-              <a href="https://godbmw.com/" target="_blank">GodBMW</a>
-            </span>
-          
-            <span class="site-footer-item">
-              <a href="http://ruanyifeng.com/" target="_blank">阮一峰的个人网站</a>
-            </span>
-          
-        </div>
-      
-        <div class="site-footer-col">
-          <h5 class="site-footer-title">Tutorial</h5>
-          
-            <span class="site-footer-item">
-              <a href="https://godbmw.com/categories/webpack4%E7%B3%BB%E5%88%97%E6%95%99%E7%A8%8B/" target="_blank">webpack4系列教程</a>
-            </span>
-          
-            <span class="site-footer-item">
-              <a href="https://godbmw.com/design-patterns/" target="_blank">设计模式手册</a>
-            </span>
-          
-        </div>
-      
-    
-    <div class="site-footer-info">
-      <i class="fa fa-clock-o"></i> 本站已稳定运行<span id="site-time"></span>
-    </div>
-    
-      <div class="site-footer-info">
-        <i class="fa fa-paw"></i> 您是本站第 <span id="site-count"></span> 位访客
-      </div>
-    
-    
-      <div class="site-footer-info">
-        <i class="fa fa-at"></i> Email: junhanliu.leon@gmail.com
-      </div>
-    
-    <div class="site-footer-info">
-      <i class="fa fa-copyright"></i> 
-      2019 <a href="https://github.com/dongyuanxin/theme-ad/" target="_blank">Theme-AD</a>.
-      Created by <a href="https://godbmw.com/" target="_blank">GodBMW</a>.
-      All rights reserved.
-    </div>
-  </footer>
 </div>
-    <div id="site-layer" style="display:none;">
-  <div class="site-layer-content">
-    <div class="site-layer-header">
-      <span class="site-layer-header-title" id="site-layer-title"></span>
-      <i class="fa fa-close" id="site-layer-close"></i>
-    </div>
-    <div class="site-layer-body" id="site-layer-container">
-      <div class="site-layer-input" id="site-layer-search" style="display: none;">
-        <div class="site-layer-input-choose">
-          <a href="javascript:void(0);" title="Change Search Engine">Google</a>
-        </div>
-        <input type="text">
-        <i class="fa fa-search"></i>
-      </div>
-      
-        <div class="site-layer-reward" id="site-layer-reward" style="display: none;">
-          
-            <div>
-              <img src="/images/wechat.png" alt="WeChat">
-              
-                <p>WeChat</p>
-              
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2019/12/18/My-First-Blog/">My First Blog :)</a>
+        </p>
+    
+        <p>
+            <a href="/2019/12/18/hello-world/">Hello World</a>
+        </p>
+    
+</div>
+                </div>
             </div>
-          
-            <div>
-              <img src="/images/alipay.png" alt="AliPay">
-              
-                <p>AliPay</p>
-              
-            </div>
-          
         </div>
-      
-      <div id="site-layer-welcome" style="display:none;"></div>
     </div>
-  </div>
 </div>
-    
-
-<div class="bottom-bar">
-  <div class="bottom-bar-left">
-    <a href="javascript:void(0);" data-enable="false">
-      <i class="fa fa-arrow-left"></i>
-    </a>
-    <a href="/2019/12/18/hello-world/" data-enable="true">
-      <i class="fa fa-arrow-right"></i>
-    </a>
-  </div>
-  <div class="bottom-bar-right">
-    <a href="javascript:void(0);" data-enable="true" id="site-toc-show-btn">
-      <i class="fa fa-bars"></i>
-    </a>
-    
-      <a href="#site-comment" data-enable="true">
-        <i class="fa fa-commenting"></i>
-      </a>
-    
-    <a href="javascript:void(0);" id="site-toggle-share-btn">
-      <i class="fa fa-share-alt"></i>
-    </a>
-    
-      <a href="javascript:void(0);" id="site-reward">
-        <i class="fa fa-thumbs-up"></i>
-      </a>
-    
-    <a href="javascript:void(0);" id="back-top-btn">
-      <i class="fa fa-chevron-up"></i>
-    </a>
-  </div>
-</div>
-    <div id="share-btn">
-  
-    <a id="share-btn-twitter" href="javascript:void(0);" target="_blank">
-      <i class="fa fa-twitter"></i>
-    </a>
-  
-  
-    <a id="share-btn-facebook" href="javascript:void(0);" target="_blank">
-      <i class="fa fa-facebook"></i>
-    </a>
-  
-  
-    <a id="share-btn-weibo" href="javascript:void(0);" target="_blank">
-      <i class="fa fa-weibo"></i>
-    </a>
-  
-  
-    <a id="share-btn-qq" href="javascript:void(0);" target="_blank">
-      <i class="fa fa-qq"></i>
-    </a>
-  
-  
-    <a id="share-btn-wechat" href="javascript:void(0);" target="_blank">
-      <i class="fa fa-wechat"></i>
-    </a>
-  
-</div>
-    
 
 
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/klugjo/hexo-theme-anodyne" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
+                            <i class="fa fa-500px"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:test@example.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/" target="_blank" rel="noopener">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
 
 
 
-    
-  </body>
+</body>
+
 </html>
