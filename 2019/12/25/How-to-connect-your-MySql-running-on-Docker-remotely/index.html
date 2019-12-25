@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in ">
+        <meta name="description" content="How to connect your MySql running on Docker remotely, using .NET CoreRecently I am doing my small project that requires remote connection to get custo">
     
 
     <!--Author-->
@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hello World"/>
+        <meta property="og:title" content="How to connect your MySql running on Docker remotely"/>
     
 
     <!--Open Graph Description-->
@@ -42,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>Hello World - Hexo</title>
+    <title>How to connect your MySql running on Docker remotely - Hexo</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
@@ -124,8 +124,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">Hello World</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-12-18</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">How to connect your MySql running on Docker remotely</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-12-25</p>
         </div>
     </div>
 
@@ -143,24 +143,29 @@
                 <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
                     <!-- Tags Vertical -->
                     
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Docker/">#Docker</a> <a class="fw3 ph1 dib" href="/tags/NET/">#.NET</a>
+                            </div>
+                        </div>
+                    
 
                     <!-- Main Post Content -->
-                    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                    <h1 id="How-to-connect-your-MySql-running-on-Docker-remotely-using-NET-Core"><a href="#How-to-connect-your-MySql-running-on-Docker-remotely-using-NET-Core" class="headerlink" title="How to connect your MySql running on Docker remotely, using .NET Core"></a>How to connect your MySql running on Docker remotely, using .NET Core</h1><h2 id="Recently-I-am-doing-my-small-project-that-requires-remote-connection-to-get-customer-information-from-Mysql-Database-running-on-Docker-from-host-server"><a href="#Recently-I-am-doing-my-small-project-that-requires-remote-connection-to-get-customer-information-from-Mysql-Database-running-on-Docker-from-host-server" class="headerlink" title="Recently I am doing my small project that requires remote connection to get customer information from Mysql Database, running on Docker, from host server."></a>Recently I am doing my small project that requires remote connection to get customer information from Mysql Database, running on Docker, from host server.</h2><h3 id="And-I-found-out-that-most-of-the-tutorial-teach-you-how-to-get-connection-from-localhost-And-I-finally-figured-out-how-to-connect-to-your-Mysql-on-docker-from-remote-server"><a href="#And-I-found-out-that-most-of-the-tutorial-teach-you-how-to-get-connection-from-localhost-And-I-finally-figured-out-how-to-connect-to-your-Mysql-on-docker-from-remote-server" class="headerlink" title="And I found out that most of the tutorial teach you how to get connection from localhost. And I finally figured out how to connect to your Mysql on docker from remote server."></a>And I found out that most of the tutorial teach you how to get connection from localhost. And I finally figured out how to connect to your Mysql on docker from remote server.</h3><h4 id="1-Firstly-you-should-know-how-to-deploy-your-Mysql-server-using-docker-And-this-link-from-Mysql-documentation-has-very-detailed-steps-teaching-you-how-to-setup-your-Mysql-database-with-docker"><a href="#1-Firstly-you-should-know-how-to-deploy-your-Mysql-server-using-docker-And-this-link-from-Mysql-documentation-has-very-detailed-steps-teaching-you-how-to-setup-your-Mysql-database-with-docker" class="headerlink" title="1. Firstly you should know how to deploy your Mysql server using docker.  And this link from Mysql documentation has very detailed steps teaching you how to setup your Mysql database with docker."></a>1. Firstly you should know how to deploy your Mysql server using docker.  And <a href="https://pypi.org/project/mpfshell/" target="_blank" rel="noopener">this link</a> from Mysql documentation has very detailed steps teaching you how to setup your Mysql database with docker.</h4><h4 id="2-To-enable-remote-access-for-your-database-you-should-change-your-password-of-root-user-From-your-host-server-get-into-the-sql-command-line"><a href="#2-To-enable-remote-access-for-your-database-you-should-change-your-password-of-root-user-From-your-host-server-get-into-the-sql-command-line" class="headerlink" title="2. To enable remote access for your database, you should change your password of root user. From your host server, get into the sql command line."></a>2. To enable remote access for your database, you should change your password of root user. From your host server, get into the sql command line.</h4><h4 id="From-docker"><a href="#From-docker" class="headerlink" title="From docker,"></a>From docker,</h4><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it &lt;your mysql instance name&gt; mysql -u root -p</span><br></pre></td></tr></table></figure>
+<h4 id="Then-type"><a href="#Then-type" class="headerlink" title="Then type"></a>Then type</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">WITH</span> mysql_native_password <span class="keyword">BY</span> <span class="string">'&lt;password&gt;'</span>;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">'root'</span>@<span class="string">'%'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">WITH</span> mysql_native_password <span class="keyword">BY</span> <span class="string">'&lt;password&gt;'</span>;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="3-The-port-for-remote-connection-is-3306-In-appsettings-json-add-your-connection-string-in-here-like-this"><a href="#3-The-port-for-remote-connection-is-3306-In-appsettings-json-add-your-connection-string-in-here-like-this" class="headerlink" title="3. The port for remote connection is 3306. In appsettings.json, add your connection string in here like this:"></a>3. The port for remote connection is 3306. In appsettings.json, add your connection string in here like this:</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"MysqlConnection":&#123;</span><br><span class="line">   "ConnectionString":"server=&lt;your server ip&gt; &gt;;userid=root;pwd=&lt;password&gt;;port=3306;database=&lt;dbName&gt;"</span><br><span class="line"> &#125;,</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="4-Add-your-sql-service-to-your-Startup-cs-class-Before-doing-that-you-should-add-Mysql-driver-to-your-project"><a href="#4-Add-your-sql-service-to-your-Startup-cs-class-Before-doing-that-you-should-add-Mysql-driver-to-your-project" class="headerlink" title="4. Add your sql service to your Startup.cs class. Before doing that, you should add Mysql driver to your project."></a>4. Add your sql service to your Startup.cs class. Before doing that, you should add Mysql driver to your project.</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">services.AddDbContext&lt;UserDbContext&gt;(options =&gt;</span><br><span class="line">                options.UseMySql(Configuration.GetSection(<span class="string">"MysqlConnection:ConnectionString"</span>).Value));</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+<h4 id="Then-you-are-good-to-go"><a href="#Then-you-are-good-to-go" class="headerlink" title="Then you are good to go!"></a>Then you are good to go!</h4>
                     
                     <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Docker/">#Docker</a> <a class="fw3 ph1 dib" href="/tags/NET/">#.NET</a>
+                        </div>
                     
 
                     <!-- Comments -->
@@ -188,6 +193,18 @@
                     <hr class="dn-l mw4 black-50 mt5" />
                     
                     <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/C/">C#</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
                     
 
                     <!-- Widget 3: Recent Posts -->
