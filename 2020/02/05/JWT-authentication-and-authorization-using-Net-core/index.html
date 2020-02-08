@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="It is a trend to use JWT to authorise and authenticate user in stateless front-end communication architecture.###Stateless communication seems to be m">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="John Doe">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="JWT authentication and authorisation using .Net core"/>
+    
+
+    <!--Open Graph Description-->
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Hexo"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+    <meta name="twitter:card" content="summary" />
+    
+
+    <!-- Title -->
+    
+    <title>JWT authentication and authorisation using .Net core - Hexo</title>
+
+    <!-- Tachyons Core CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <!-- Google Analytics -->
+    
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+
+<body>
+
+<!-- Main Content -->
+<!-- Banner -->
+<!-- Banner -->
+<div class="w-100 bg-1 ph5-ns ph3 text-light">
+    
+    <nav class="db dt-l w-100 mw8 center border-box pv3">
+        <a class="db dtc-l v-mid link dim w-100 w-25-l tc tl-l mb2 mb0-l white" href="/" title="Hexo">
+            <img src="http://www.codeblocq.com/assets/projects/hexo-theme-anodyne/assets/anodyne.svg" class="dib h3" alt="Hexo">
+        </a>
+        <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/" 
+                    title="Home">
+                    Home
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/archives" 
+                    title="Archives">
+                    Archives
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/tags" 
+                    title="Tags">
+                    Tags
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/categories" 
+                    title="Categories">
+                    Categories
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/about.html" 
+                    title="About">
+                    About
+                </a>
+            
+                <a class="link dim f6 f5-l dib mr3 mr4-l white" 
+                    href="/contact.html" 
+                    title="Contact">
+                    Contact
+                </a>
+            
+        </div>
+    </nav>
+
+    <!-- Title -->
+    <div class="w-100 mw8 center vh-40 dt">
+        <div class="dtc v-mid white">
+            <h1 class="f1-l f2-m tc tc-m tl-ns">JWT authentication and authorisation using .Net core</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2020-02-05</p>
+        </div>
+    </div>
+
+    <!-- Icon -->
+    <div class="relative w-100 mw8 center white dn dn-m db-ns">
+        <i class="header-icon fa fa-file-text-o"></i>
+    </div>
+</div>
+
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/Net-Core/">#.Net Core</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h1 id="It-is-a-trend-to-use-JWT-to-authorise-and-authenticate-user-in-stateless-front-end-communication-architecture"><a href="#It-is-a-trend-to-use-JWT-to-authorise-and-authenticate-user-in-stateless-front-end-communication-architecture" class="headerlink" title="It is a trend to use JWT to authorise and authenticate user in stateless front-end communication architecture."></a>It is a trend to use JWT to authorise and authenticate user in stateless front-end communication architecture.</h1><p>###Stateless communication seems to be more and more popular these days because of several benefits, like decoupled architecture and stateless, which means the server doesn’t need to store the information about users. It significantly releases the burden from the server.And it is also a typical way for Restful API server.</p>
+<h3 id="Today-I-am-going-to-introduce-my-way-to-implement-the-JWT-authentication-and-authorisation-on-Net-Core"><a href="#Today-I-am-going-to-introduce-my-way-to-implement-the-JWT-authentication-and-authorisation-on-Net-Core" class="headerlink" title="Today, I am going to introduce my way to implement the JWT authentication and authorisation on .Net Core."></a>Today, I am going to introduce my way to implement the JWT authentication and authorisation on .Net Core.</h3><h4 id="For-JWT-knowledge-I’m-not-going-to-talk-about-the-mechanism-behind-the-sense-If-you-are-not-quite-familiar-about-JWT-there-is-a-useful-link-for-you-to-take-a-look-at-This-is-the-link-telling-you-about-JWT-and-how-you-can-implement-JWT-communication-with-Angular"><a href="#For-JWT-knowledge-I’m-not-going-to-talk-about-the-mechanism-behind-the-sense-If-you-are-not-quite-familiar-about-JWT-there-is-a-useful-link-for-you-to-take-a-look-at-This-is-the-link-telling-you-about-JWT-and-how-you-can-implement-JWT-communication-with-Angular" class="headerlink" title="For JWT knowledge, I’m not going to talk about the mechanism behind the sense. If you are not quite familiar about JWT, there is a useful link for you to take a look at. This is the link telling you about JWT and how you can implement JWT communication with Angular."></a>For JWT knowledge, I’m not going to talk about the mechanism behind the sense. If you are not quite familiar about JWT, there is a useful link for you to take a look at. <a href="https://blog.angular-university.io/angular-jwt-authentication/" target="_blank" rel="noopener">This</a> is the link telling you about JWT and how you can implement JWT communication with Angular.</h4><p>###Le’s start:</p>
+<p>###Generally, you should use a different server to generate and sent JWT token, but I’am too lazy to create another authentication server. So I am going to implement authentication as a service for my Restful API.</p>
+<p>##Step1</p>
+<h3 id="You-should-implement-an-Interface-to-provide-a-general-functionality-about-your-service"><a href="#You-should-implement-an-Interface-to-provide-a-general-functionality-about-your-service" class="headerlink" title="You should implement an Interface to provide a general functionality about your service."></a>You should implement an Interface to provide a general functionality about your service.</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IAuthService</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function">Task&lt;UserAuthBody&gt; <span class="title">Authenticate</span>(<span class="params"><span class="keyword">string</span> username, <span class="keyword">string</span> password</span>)</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="The-UserAuthBody-is-the-class-to-return-information-to-user-it-can-be-anything-you-like-but-it-should-include-your-JWT-token-to-return-to-user-who-requested-server-for-authentication"><a href="#The-UserAuthBody-is-the-class-to-return-information-to-user-it-can-be-anything-you-like-but-it-should-include-your-JWT-token-to-return-to-user-who-requested-server-for-authentication" class="headerlink" title="The UserAuthBody is the class to return information to user, it can be anything you like, but it should include your JWT token to return to user who requested server for authentication."></a>The UserAuthBody is the class to return information to user, it can be anything you like, but it should include your JWT token to return to user who requested server for authentication.</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UserAuthBody</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">int</span> Id &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> Username &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">string</span> Token &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step2"><a href="#Step2" class="headerlink" title="Step2"></a>Step2</h2><h3 id="You-need-a-secret-key-stored-in-your-server-to-sign-encrypt-the-signature-returned-to-the-user"><a href="#You-need-a-secret-key-stored-in-your-server-to-sign-encrypt-the-signature-returned-to-the-user" class="headerlink" title="You need a secret key stored in your server to sign(encrypt) the signature returned to the user."></a>You need a secret key stored in your server to sign(encrypt) the signature returned to the user.</h3><p>###In your appsettings.json, add a secret key, which should be string and al least 18 bits large to comply the SHA256 encryption algorithm.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"AppSettings":&#123;</span><br><span class="line">    "Secret": "This secret should be long enough to be a key"</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>###Now you need a class to store the secret key</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AppSetting</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">string</span> Secret &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a>Step 3</h2><h3 id="Now-it’s-the-time-to-implement-your-authentication-service-Firstly-you-need-a-class-to-communicate-with-database-to-find-out-whether-username-and-passwords-matches-the-record-in-your-database-Here-appSettings-is-the-class-you-need-to-get-your-Secret"><a href="#Now-it’s-the-time-to-implement-your-authentication-service-Firstly-you-need-a-class-to-communicate-with-database-to-find-out-whether-username-and-passwords-matches-the-record-in-your-database-Here-appSettings-is-the-class-you-need-to-get-your-Secret" class="headerlink" title="Now it’s the time to implement your authentication service.Firstly, you need a class to communicate with database to find out whether username and passwords matches the record in your database. Here appSettings is the class you need to get your Secret."></a>Now it’s the time to implement your authentication service.Firstly, you need a class to communicate with database to find out whether username and passwords matches the record in your database. Here appSettings is the class you need to get your Secret.</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AuthService</span>(<span class="params">IOptions&lt;AppSetting&gt; appSettings, UserDbContext userDbContext</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    _appSettings = appSettings.Value;</span><br><span class="line">    _userDbContext = userDbContext;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;UserAuthBody&gt; <span class="title">Authenticate</span>(<span class="params"><span class="keyword">string</span> userName, <span class="keyword">string</span> password</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> user = <span class="keyword">await</span> _userDbContext.Users.SingleOrDefaultAsync(x =&gt; x.ScreenName == userName &amp;&amp; x.Password == password);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Then-you-need-a-tokenHandler-to-construct-your-JWT-token"><a href="#Then-you-need-a-tokenHandler-to-construct-your-JWT-token" class="headerlink" title="Then, you need a tokenHandler to construct your JWT token."></a>Then, you need a tokenHandler to construct your JWT token.</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tokenHandler = <span class="keyword">new</span> JwtSecurityTokenHandler();</span><br><span class="line"><span class="keyword">var</span> key = Encoding.ASCII.GetBytes(_appSettings.Secret);</span><br></pre></td></tr></table></figure>
+
+<h3 id="And-you-need-describe-your-token-like-what-kind-of-information-should-be-inside-the-JWT-like-Claims-may-include-what-privilege-the-user-has-manager-or-user-or-what-this-JWT-belongs-to-expiry-time-and-signing-algorithm"><a href="#And-you-need-describe-your-token-like-what-kind-of-information-should-be-inside-the-JWT-like-Claims-may-include-what-privilege-the-user-has-manager-or-user-or-what-this-JWT-belongs-to-expiry-time-and-signing-algorithm" class="headerlink" title="And you need describe your token, like what kind of information should be inside the JWT like Claims (may include what privilege the user has, manager or user,or what this JWT belongs to), expiry time, and signing algorithm."></a>And you need describe your token, like what kind of information should be inside the JWT like Claims (may include what privilege the user has, manager or user,or what this JWT belongs to), expiry time, and signing algorithm.</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tokenDescriptor = <span class="keyword">new</span> SecurityTokenDescriptor</span><br><span class="line">&#123;</span><br><span class="line">    Subject = <span class="keyword">new</span> ClaimsIdentity(<span class="keyword">new</span> Claim[]</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//add identity</span></span><br><span class="line">        <span class="keyword">new</span> Claim(<span class="string">"userID"</span>,user.UserId.ToString()),</span><br><span class="line">    &#125;),</span><br><span class="line">    Expires = DateTime.Now.AddDays(<span class="number">7</span>),</span><br><span class="line">    SigningCredentials = <span class="keyword">new</span> SigningCredentialSymmetricSecurityKey(key),SecurityAlgorithms.H256Signature )</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Finally-you-need-create-your-JWT-and-pass-it-to-your-client-In-my-case-I-will-return-An-UserAuthBody-which-contains-userId-username-and-token-This-will-be-interpret-as-Json-on-client-side"><a href="#Finally-you-need-create-your-JWT-and-pass-it-to-your-client-In-my-case-I-will-return-An-UserAuthBody-which-contains-userId-username-and-token-This-will-be-interpret-as-Json-on-client-side" class="headerlink" title="Finally, you need create your JWT and pass it to your client.In my case I will return An UserAuthBody, which contains userId, username and token. This will be interpret as Json on client side."></a>Finally, you need create your JWT and pass it to your client.In my case I will return An UserAuthBody, which contains userId, username and token. This will be interpret as Json on client side.</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> token = tokenHandler.CreateToken(tokenDescriptor);</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="keyword">new</span> UserAuthBody</span><br><span class="line">&#123;</span><br><span class="line">    Id = user.UserId,</span><br><span class="line">    Username = user.ScreenName,</span><br><span class="line">    Token = tokenHandler.WriteToken(token),</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>###The full class would be look like this:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AuthService</span> : <span class="title">IAuthServic</span>&#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">readonly</span> AppSetting _appSettings;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">readonly</span> UserDbContext _userDbContext;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">AuthService</span>(<span class="params">IOptions&lt;AppSetting&gt; appSettinUserDbContext userDbContext</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    _appSettings = appSettings.Value;</span><br><span class="line">    _userDbContext = userDbContext;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;UserAuthBody&gt; <span class="title">Authenticate</span>(<span class="params">struserName, <span class="keyword">string</span> password</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> user = <span class="keyword">await</span> _userDbContext.Users</span><br><span class="line">                .SingleOrDefaultAsync(x =&gt; x.ScreenName == userName &amp;&amp; x.Password == password);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> tokenHandler = <span class="keyword">new</span> JwtSecurityTokenHandler();</span><br><span class="line">    <span class="keyword">var</span> key = Encoding.ASCII.GetBytes(_appSettings.Secret);</span><br><span class="line">    <span class="keyword">var</span> tokenDescriptor = <span class="keyword">new</span> SecurityTokenDescriptor</span><br><span class="line">    &#123;</span><br><span class="line">        Subject = <span class="keyword">new</span> ClaimsIdentity(<span class="keyword">new</span> Claim[]</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//add identity</span></span><br><span class="line">            <span class="keyword">new</span> Claim(<span class="string">"userID"</span>,user.UserId.ToString()),</span><br><span class="line">        &#125;),</span><br><span class="line">        Expires = DateTime.Now.AddDays(<span class="number">7</span>),</span><br><span class="line">        SigningCredentials = <span class="keyword">new</span> SigningCredentials(SymmetricSecurityKey(key),SecurityAlgorithms.Hma256Signature )</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> token = tokenHandler.CreateToken(tokenDescriptor);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> UserAuthBody</span><br><span class="line">    &#123;</span><br><span class="line">        Id = user.UserId,</span><br><span class="line">        Username = user.ScreenName,</span><br><span class="line">        Token = tokenHandler.WriteToken(token),</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h2><h3 id="Add-your-service-and-configuration-in-startup-cs-to-initialise-your-service"><a href="#Add-your-service-and-configuration-in-startup-cs-to-initialise-your-service" class="headerlink" title="Add your service and configuration in startup.cs to initialise your service."></a>Add your service and configuration in startup.cs to initialise your service.</h3><p>###Add Secret class into Settings. and set your secret as your Key, it must be bytes.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> appSettingSection = Configuration.GetSection(<span class="string">"AppSettings"</span>);</span><br><span class="line"></span><br><span class="line">services.Configure&lt;AppSetting&gt;(appSettingSection);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> appSettings = appSettingSection.Get&lt;AppSetting&gt;();</span><br><span class="line"><span class="keyword">var</span> key = Encoding.ASCII.GetBytes(appSettings.Secret);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Add-authentication-as-service-If-you-wanna-validate-Issuer-user-should-add-issuer-as-parameter-inside-the-request"><a href="#Add-authentication-as-service-If-you-wanna-validate-Issuer-user-should-add-issuer-as-parameter-inside-the-request" class="headerlink" title="Add authentication as service. If you wanna validate Issuer, user should add issuer as parameter inside the request."></a>Add authentication as service. If you wanna validate Issuer, user should add issuer as parameter inside the request.</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">services.AddAuthentication(options =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    options.DefaultAuthenticateSchJwtBearerDefaults.AuthenticationScheme;</span><br><span class="line">    options.DefaultChallengeSchJwtBearerDefaults.AuthenticationScheme;</span><br><span class="line">&#125;).AddJwtBearer(options =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    options.RequireHttpsMetadata = <span class="literal">false</span>;</span><br><span class="line">    options.SaveToken = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    options.TokenValidationParameters TokenValidationParameters</span><br><span class="line">    &#123;</span><br><span class="line">        ValidateIssuer = <span class="literal">false</span>,</span><br><span class="line">        ValidateAudience = <span class="literal">false</span>,</span><br><span class="line">        ValidateLifetime = <span class="literal">true</span>,</span><br><span class="line">        ValidateIssuerSigningKey = <span class="literal">true</span>,</span><br><span class="line">        ValidIssuer = <span class="string">"http://localhost:5001"</span>,</span><br><span class="line">        ValidAudience = <span class="string">"http://localhost:5001"</span>,</span><br><span class="line">        <span class="function">IssuerSigningKey <span class="title">SymmetricSecurityKey</span>(<span class="params">key</span>)</span></span><br><span class="line"><span class="function">    &#125;</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Add-authentication-and-authorisation-in-Configure-class"><a href="#Add-authentication-and-authorisation-in-Configure-class" class="headerlink" title="Add authentication and authorisation in Configure class"></a>Add authentication and authorisation in Configure class</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">app.UseAuthentication();</span><br><span class="line">app.UseAuthorization();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Step-5"><a href="#Step-5" class="headerlink" title="Step 5"></a>Step 5</h2><h3 id="In-your-controller-use-this-service-to-authenticate-user"><a href="#In-your-controller-use-this-service-to-authenticate-user" class="headerlink" title="In your controller, use this service to authenticate user"></a>In your controller, use this service to authenticate user</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">HttpPost(<span class="meta-string">"authenticate"</span>)</span>]</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;UserAuthBody&gt; <span class="title">Authenticate</span>(<span class="params">[FromBody]Customer userParam</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> userAuth = aw_authService.Authenticate(userParam.UsernauserParam.Password);</span><br><span class="line">    <span class="keyword">return</span> userAuth;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="And-we-will-use-this-class-to-test-our-service"><a href="#And-we-will-use-this-class-to-test-our-service" class="headerlink" title="And we will use this class to test our service"></a>And we will use this class to test our service</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[<span class="meta">Authorize</span>]</span><br><span class="line">[<span class="meta">HttpGet(<span class="meta-string">"&#123;id&#125;"</span>)</span>]</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">async</span> Task&lt;UserResDTO&gt; <span class="title">GetUserById</span>(<span class="params"><span class="keyword">int</span> id</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">await</span> _userDbContext.Users</span><br><span class="line">        .Include(ur =&gt; ur.UserRestaurants)</span><br><span class="line">        .ThenInclude(urInfo =&gt; urInfo.RestaurantInfo)</span><br><span class="line">        .Where(user =&gt; user.UserId == id)</span><br><span class="line">        .FirstAsync();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> _mapper.Map&lt;User,UserResDTO&gt;(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Use-Postman-to-test-our-function-remember-use-post-to-request-jwt-token"><a href="#Use-Postman-to-test-our-function-remember-use-post-to-request-jwt-token" class="headerlink" title="Use Postman to test our function, remember use post to request jwt token."></a>Use Postman to test our function, remember use post to request jwt token.</h3><p><img src="/img/Postman.png" alt="request"></p>
+<h3 id="The-result-It-works"><a href="#The-result-It-works" class="headerlink" title="The result, It works!"></a>The result, It works!</h3><p><img src="/img/result.png" alt="result"></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/Net-Core/">#.Net Core</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/V.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="John Doe">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Junhan Liu and this is my blog
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5" />
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/C/">C#</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5" />
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2020/02/05/JWT-authentication-and-authorization-using-Net-core/">JWT authentication and authorisation using .Net co</a>
+        </p>
+    
+        <p>
+            <a href="/2020/01/05/Connecting-and-querying-asynchronously-with-mongodb-in-Net-Core-framework/">Connecting and querying asynchronously with mongod</a>
+        </p>
+    
+        <p>
+            <a href="/2019/12/25/How-to-connect-your-MySql-running-on-Docker-remotely/">How to connect your MySql running on Docker remote</a>
+        </p>
+    
+        <p>
+            <a href="/2019/12/18/How%20to%20build%20M-N%20relationship%20using%20EF%20Core/">How to build M-N relationship using EF Core</a>
+        </p>
+    
+        <p>
+            <a href="/2019/12/18/hello-world/">Hello World</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="bg-1 ph2 ph5-ns pv5">
+        <div class="mv8">
+            <div class="center tc">
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://twitter.com/?lang=en" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.facebook.com/" target="_blank">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://dribbble.com/" target="_blank">
+                            <i class="fa fa-dribbble"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://github.com/klugjo/hexo-theme-anodyne" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://plus.google.com/" target="_blank">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://www.behance.net/" target="_blank">
+                            <i class="fa fa-behance"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="https://500px.com/" target="_blank">
+                            <i class="fa fa-500px"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="mailto:test@example.com" target="_blank">
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </div>
+                
+                    <div class="dib mh3">
+                        <a class="f3 f2-ns white dim" href="/#" target="_blank">
+                            <i class="fa fa-rss"></i>
+                        </a>
+                    </div>
+                
+            </div>
+            <div class="f6 f5-ns center tc white pt5 fw3">
+                @Untitled. All right reserved | Design & Hexo <a class="link dim white" href="http://www.codeblocq.com/" target="_blank" rel="noopener">Jonathan Klughertz</a>
+            </div>
+        </div>
+    </div>
+
+<!-- After Footer -->
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
